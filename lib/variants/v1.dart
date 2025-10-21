@@ -34,7 +34,7 @@ class _V1State extends State<V1> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center, // Центруємо
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
 
         Text('Ширина: ${_currentWidth.toStringAsFixed(2)}'),
@@ -66,14 +66,13 @@ class _V1State extends State<V1> {
 
         const SizedBox(height: 50),
 
-        // 6. Наш Контейнер!
         Container(
-          width: _currentWidth,  // <-- "Читає" з пам'яті
-          height: _currentHeight, // <-- "Читає" з пам'яті
+          width: _currentWidth,
+          height: _currentHeight,
           decoration: BoxDecoration(
             color: Colors.red,
             borderRadius: BorderRadius.only(
-              topRight: Radius.circular(_currentRadius), // <-- "Читає"
+              topRight: Radius.circular(_currentRadius),
             ),
           ),
         ),
